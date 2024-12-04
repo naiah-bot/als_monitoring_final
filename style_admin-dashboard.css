@@ -1,0 +1,290 @@
+/* General page layout */
+body {
+    background-image: url('als-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Arial, sans-serif;
+}
+header {
+    background-color: #211c41;
+    color: white; /* White text color */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px 10px; /* Padding around the header */
+    z-index: 10; /* Ensure header is above other elements */
+    position: relative; /* Positioning context for z-index */
+}
+
+.logo img {
+    height: 30px; /* Adjust as needed */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+          
+
+/* Container setup */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.profile_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile_icon i {
+    font-size: 100px;
+}
+
+.profile-details h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-details p {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;  
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Navigation Drawer */
+.navigation {
+    position: fixed;
+    width: 250px;
+    background-color: #3a326f;
+    color: #fff;
+    top: 45px; /* Adjusted to position below the header */
+    left: 0;
+    bottom: 0;
+    padding: 20px 0;
+    overflow: auto;
+}
+
+/* Styling for the navigation links */
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    padding: 15px 0;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: black;
+    background-color: #7868dd;
+}
+
+.navigation ul li a .icon {
+    margin-right: 15px;
+}
+
+.navigation ul li a .title {
+    font-size: 18px;
+}
+
+/* Main Content Section */
+.main-content {
+    margin-left: 250px; /* Prevent overlap with the navigation drawer */
+    padding: 20px;
+    flex: 1;
+}
+
+/* Table Styling */
+table {
+    width: 70%; /* Adjust width to make it narrower */
+    margin-left: auto; /* Align to the right */
+    margin-right: 0;  /* Remove left margin */
+    border-collapse: collapse;
+    font-size: 1em;
+    background-color: #fff;
+    border: 1px solid black;
+    text-align: center;
+}
+
+table th, table td {
+    border: 1px solid black;
+}
+
+table thead {
+    background-color: #0047AB;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form Styling for Registration and Other Forms */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-cancel {
+    background-color: #ccc;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-cancel:hover {
+    background-color: #bbb;
+}
+
+.btn-save {
+    background-color: #3a326f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #2a1f2a;
+}
+
+/* File Upload Styling */
+.upload-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.image-preview {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-preview__image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-preview__text {
+    color: #aaa;
+    font-size: 12px;
+    text-align: center;
+}
+
+.upload-button {
+    background-color: #3d2b3d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.upload-button:hover {
+    background-color: #2a1f2a;
+}
+
+/* Adjustments for responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navigation {
+        width: 100%;
+        position: relative;
+        top: 0;
+        padding: 15px 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    table {
+        width: 100%;
+        font-size: 0.9em;
+    }
+}
+

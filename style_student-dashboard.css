@@ -1,0 +1,288 @@
+/* General page layout */
+body {
+    background-image: url('als-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #211c41;
+    color: white; /* White text color */
+    display: flex;
+    align-items: center; /* Center items vertically */
+    padding: 10px 10px; /* Padding around the header */
+    z-index: 10; /* Ensure header is above other elements */
+    position: relative; /* Positioning context for z-index */
+}
+
+.logo img {
+    height: 30px; /* Adjust as needed */
+    margin-right: 10px; /* Space between logo and title */
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Container setup */
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.profile_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile_icon i {
+    font-size: 100px;
+}
+
+.profile-details h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;  
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.profile-details p {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;  
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Navigation Drawer */
+.navigation {
+    position: fixed;
+    width: 250px;
+    background-color: #3a326f;
+    color: #fff;
+    top: 45px; /* Adjusted to position below the header */
+    left: 0;
+    bottom: 0;
+    padding: 20px 0;
+    overflow: auto;
+}
+
+/* Styling for the navigation links */
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    padding: 15px 0;
+}
+
+.navigation ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    transition: background-color 0.3s;
+}
+
+.navigation ul li a:hover {
+    color: black;
+    background-color: #7868dd;
+}
+
+.navigation ul li a .icon {
+    margin-right: 15px;
+}
+
+.navigation ul li a .title {
+    font-size: 18px;
+}
+
+/* Main content section next to the fixed drawer */
+.main-content {
+    margin-left: 250px; /* Prevent overlap with the navigation drawer */
+    padding: 20px;
+    flex: 1;
+}
+/* Status Container */
+#status-container {
+    display: flex;
+    justify-content: space-around; /* Space between the rectangles */
+    margin-top: 50px; /* Adjust spacing from the top */
+    margin-left: 270px; /* Align with the content next to the navigation drawer */
+    margin-right: 50px;
+    gap: 20px; /* Space between rectangles */
+}
+
+/* Individual Status Rectangle */
+.status-rectangle {
+    flex: 1; /* Allow each rectangle to expand equally */
+    background-color: #3a326f;
+    color: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    opacity: 0.9;
+    height: 250px; /* Define a shorter fixed height */
+    display: flex; /* Use flex to center content */
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+/* Icon styling */
+.status-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    display: block;
+    color: black;
+}
+
+/* Text within the rectangles */
+.status-rectangle p {
+    font-size: 18px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+/* Container for the mission and vision boxes at the bottom */
+#rectangle-container {
+    display: flex;
+    flex-direction: column; /* Stack rectangles vertically */
+    position: fixed;
+    bottom: 20px; /* Positioned at the bottom */
+    left: 270px; /* Leave space for the drawer (250px) + padding */
+    right: 50px; /* Equal padding on the right side */
+    width: calc(100% - 320px); /* Adjust the total width based on the left and right padding */
+    gap: 20px; /* Space between the rectangles */
+}
+
+/* First rectangle (Mission) */
+#rectangle_mission {
+    width: 100%; /* Take full width of container */
+    opacity: 0.9;
+    border-radius: 16px;
+    background: #3a326f;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Second rectangle (Vision) */
+#rectangle_vision {
+    width: 100%; /* Take full width of container */
+    opacity: 0.9;
+    border-radius: 16px;
+    background: #4a3f80; /* Slightly different color for vision */
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* Text styles for the Mission and Vision headings */
+#rectangle_mission h2, #rectangle_vision h2 {
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Text styles for the Mission and Vision content */
+#rectangle_mission p, #rectangle_vision p {
+    font-size: 16px;
+    line-height: 1.2;
+    font-style: italic;
+}
+/* ATTENDANCE AREA */
+.content h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto 20px;
+    font-size: 1em;
+    text-align: left;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* Ensures the table background is white */
+    border: 1px solid black; /* Ensures the table border lines are black */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+table thead {
+    background-color: #0047AB;
+    color: #fff;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    border: 1px solid black; /* Ensures cell borders are black */
+}
+
+table th {
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9; /* Slight gray for alternating rows */
+}
+
+table tr:hover {
+    background-color: #f1f1f1; /* Highlighted row on hover */
+}
+
+table td {
+    text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .navigation ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}
+
+qr-scanner-container {
+    display: none;
+    text-align: center;
+    margin: 20px auto;
+    position: fixed; /* Fixed position to stick at the bottom of the screen */
+    bottom: 20px; /* Distance from the bottom of the screen */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust for horizontal centering */
+    width: 100%; /* Optional: Adjust width to your liking */
+}
+
+qr-reader {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}

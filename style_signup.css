@@ -1,0 +1,136 @@
+/* Basic styles for the body */
+body {
+    background-image: url('als-bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    font-size: 24px; /* Adjust size for better visibility */
+    font-weight: 600; /* Bold text */
+    color: white; /* White color for the heading */
+    margin-bottom: 20px; /* Add some space below the heading */
+    text-align: center; /* Center the heading */
+}
+#logo {
+    width: 300px;
+    height: auto;
+    position: absolute;
+    top: 30px; /* Keep this as is */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#rectangle {
+    width: 30%;
+    max-height: 700px;
+    position: absolute;
+    left: 50%;
+    top: 210px; /* Adjust top to place below logo */
+    transform: translateX(-50%);
+    opacity: 0.9;
+    border-radius: 16px;
+    background: #3a326f;
+    padding: 20px;
+    z-index: 10;
+}
+
+
+/* Box styling for signup */
+#rectangle_signup {
+    top: 5px; /* Adjust the top value for signup */
+    height: auto;
+    width: 400px;
+    background-color: rgba(58, 50, 111, 0.95); /* Darker background for signup */
+    border-radius: 15px; /* Rounded edges */
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    z-index: 10; /* Ensure the rectangle is in front */
+    position: relative; /* Make sure it's positioned properly within the page */
+    padding: 30px; /* Inner spacing */
+    margin: auto; /* Centering */
+    text-align: left;
+}
+
+/* Full-width inputs for both pages */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+/* Extra style for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336; /* Red color for cancel button */
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn {
+        width: 100%;
+    }
+}
+
+/* Additional styles for login button */
+#loginButton {
+    background-color: #08a045;
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px; /* Inner spacing */
+    width: 100%;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect on hover */
+}
+
+#loginButton:hover {
+    background-color: #4a2392; /* Darker purple on hover */
+}
+
+#registerButton {
+    background-color: #08a045;
+    color: white; /* White text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded edges */
+    padding: 10px; /* Inner spacing */
+    width: 100%;
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Transition effect on hover */
+}
+
+#registerButton:hover {
+    background-color: #4a2392; /* Darker purple on hover */
+}
+
+
+.account-prompt {
+    margin-top: 15px; /* Spacing above the account prompt */
+}
+
+.signup-link {
+    color: #ffffff; /* White link color */
+    text-decoration: underline; /* Underline for links */
+}
+
+        /* Responsive adjustments for very small screens */
+        @media screen and (max-width: 300px) {
+            .cancelbtn {
+                width: 100%;
+            }
